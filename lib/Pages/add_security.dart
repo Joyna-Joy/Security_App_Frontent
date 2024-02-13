@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:securty_app_frontend/Pages/login_page.dart';
 import 'package:securty_app_frontend/Pages/view_Security.dart';
-import 'package:securty_app_frontend/Services/ViewSercvices.dart';
+import 'package:securty_app_frontend/Services/SecurtiySercvices.dart';
 
 class AddSecurity extends StatefulWidget {
   const AddSecurity({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:securty_app_frontend/Models/View_SecurityModel.dart';
 import 'package:securty_app_frontend/Pages/add_security.dart';
-import 'package:securty_app_frontend/Services/ViewSercvices.dart';
+import 'package:securty_app_frontend/Services/SecurtiySercvices.dart';
 
 class View_Secuirty extends StatefulWidget {
   const View_Secuirty({super.key});
@@ -15,7 +15,7 @@ class _View_SecuirtyState extends State<View_Secuirty> {
   @override
   void initState() {
     super.initState();
-    data = SecurityApiServices().getVisitors();
+    data = SecurityApiServices().getSecurity();
   }
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,6 +46,7 @@ class _View_SecuirtyState extends State<View_Secuirty> {
                         children: [
                           ListTile(
                             leading: CircleAvatar(
+                              backgroundColor:Colors.redAccent.shade100,
                               child: Text(snapshot.data![index].userName[0].toString()),
                             ),
                             title: Text("User Name"+snapshot.data![index].userName.toString()),

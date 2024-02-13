@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(10)
                         )
                     ),
-                    onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => ViewVisitors()));}, child:Text("View All Vistors")),
+                    onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => View_Visitors()));}, child:Text("View All Vistors")),
               ),
             ],
           ),

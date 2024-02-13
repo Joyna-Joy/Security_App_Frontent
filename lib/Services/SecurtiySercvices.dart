@@ -27,7 +27,7 @@ class SecurityApiServices {
     }
   }
 
-  Future<List<ViewSecurity>> getVisitors() async {
+  Future<List<ViewSecurity>> getSecurity() async {
     var client = http.Client();
     var apiUrl = Uri.parse("");
     var response = await client.get(apiUrl);
@@ -36,7 +36,7 @@ class SecurityApiServices {
       return viewSecurityFromJson(response.body);
     }
     else {
-      print('Failed to get visitors. Status code: ${response.statusCode}');
+      print('Failed to get Security. Status code: ${response.statusCode}');
       return [];
     }
   }
