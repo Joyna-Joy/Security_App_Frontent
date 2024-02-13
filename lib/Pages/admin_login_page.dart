@@ -12,11 +12,14 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
         home:Scaffold(
           appBar: AppBar(
             backgroundColor:Color(0xFF9A2706),
             title: Text("Admin Login",style: TextStyle(color: Colors.white),),
+            actions: <Widget>[
+              IconButton(onPressed: () {},icon: Icon(Icons.more_vert, color: Colors.white),),
+            ],
           ),
       body: SingleChildScrollView(
         child: Container(
