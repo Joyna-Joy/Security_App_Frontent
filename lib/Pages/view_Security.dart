@@ -49,7 +49,7 @@ class _View_SecuirtyState extends State<View_Secuirty> {
                               backgroundColor:Colors.redAccent.shade100,
                               child: Text(snapshot.data![index].userName[0].toString()),
                             ),
-                            title: Text("User Name"+snapshot.data![index].userName.toString()),
+                            title: Text("User Name"+snapshot.data![index].userName.toString()+"\n"+"Email Id"+snapshot.data![index].emailId.toString()),
                             subtitle: Text("Employee_Id"+snapshot.data![index].employeeId + "\n" +
                                 "Address"+snapshot.data![index].address + "\n" +
                                 "Phone_Number"+snapshot.data![index].phoneNumber.toString()),

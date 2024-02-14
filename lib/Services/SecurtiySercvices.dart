@@ -4,9 +4,9 @@ import 'dart:convert';
 import 'package:securty_app_frontend/Pages/view_Security.dart';
 class SecurityApiServices {
   Future<dynamic> viewSecurityData(String userName, String employeeId,
-      String address, String phoneNumber) async {
+      String address, String phoneNumber,String emailId,String password) async {
     var client = http.Client();
-    var apiUrl = Uri.parse("");
+    var apiUrl = Uri.parse("http://192.168.1.4:3001/api/sec/add");
     var response = await client.post(apiUrl,
         headers: <String, String>{
           "Content-Type": "application/json; charset=UTF-8"
@@ -29,7 +29,7 @@ class SecurityApiServices {
 
   Future<List<ViewSecurity>> getSecurity() async {
     var client = http.Client();
-    var apiUrl = Uri.parse("");
+    var apiUrl = Uri.parse("http://192.168.1.4:3001/api/sec/login");
     var response = await client.get(apiUrl);
 
     if (response.statusCode == 200) {

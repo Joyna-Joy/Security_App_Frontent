@@ -9,6 +9,7 @@ List<ViewVisitors> viewVisitorsFromJson(String str) => List<ViewVisitors>.from(j
 String viewVisitorsToJson(List<ViewVisitors> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class ViewVisitors {
+  String securityId;
   String vistorName;
   String vistorPhone;
   String vistorAadhar;
@@ -16,6 +17,7 @@ class ViewVisitors {
   String purposeOfVisit;
 
   ViewVisitors({
+    required this.securityId,
     required this.vistorName,
     required this.vistorPhone,
     required this.vistorAadhar,
@@ -24,6 +26,7 @@ class ViewVisitors {
   });
 
   factory ViewVisitors.fromJson(Map<String, dynamic> json) => ViewVisitors(
+    securityId: json["securityId"],
     vistorName: json["vistorName"],
     vistorPhone: json["vistorPhone"],
     vistorAadhar: json["vistorAadhar"],
@@ -32,6 +35,7 @@ class ViewVisitors {
   );
 
   Map<String, dynamic> toJson() => {
+    "securityId": securityId,
     "vistorName": vistorName,
     "vistorPhone": vistorPhone,
     "vistorAadhar": vistorAadhar,

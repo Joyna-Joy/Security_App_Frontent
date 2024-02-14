@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:securty_app_frontend/Pages/login_page.dart';
-import 'package:securty_app_frontend/Pages/view_Security.dart';
 import 'package:securty_app_frontend/Services/SecurtiySercvices.dart';
 
 class AddSecurity extends StatefulWidget {
@@ -11,11 +9,13 @@ class AddSecurity extends StatefulWidget {
   State<AddSecurity> createState() => _AddSecurityState();
 }
 class _AddSecurityState extends State<AddSecurity> {
-  String UserName = "", EmployeeId = "", Address = "", PhoneNumber = "";
+  String UserName = "", EmployeeId = "", Address = "", PhoneNumber = "",EmailId="", Password="";
   TextEditingController UserName1 = TextEditingController();
   TextEditingController EmployeeId1 = TextEditingController();
   TextEditingController Address1 = TextEditingController();
   TextEditingController PhoneNumber1 = TextEditingController();
+  TextEditingController EmailId1 = TextEditingController();
+  TextEditingController Password1 = TextEditingController();
 
   void SentValuesApi() async {
     final response = await SecurityApiServices().viewSecurityData(
@@ -23,6 +23,8 @@ class _AddSecurityState extends State<AddSecurity> {
       EmployeeId1.text,
       Address1.text,
       PhoneNumber1.text,
+      EmailId1.text,
+      Password1.text,
     );
 
     if (response["status"] == "success") {
@@ -83,6 +85,24 @@ class _AddSecurityState extends State<AddSecurity> {
                   decoration: InputDecoration(
                       labelText: "Phone Number",
                       hintText: "Enter Phone_Number",
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
+                  ),
+                ),
+                SizedBox(height: 25,),
+                TextField(
+                  controller: EmailId1,
+                  decoration: InputDecoration(
+                      labelText: "Email Id",
+                      hintText: "Enter Email Id",
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
+                  ),
+                ),
+                SizedBox(height: 25,),
+                TextField(
+                  controller: Password1,
+                  decoration: InputDecoration(
+                      labelText: "Password",
+                      hintText: "Enter Password",
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
                   ),
                 ),

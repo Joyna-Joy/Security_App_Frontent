@@ -4,7 +4,7 @@ import 'package:securty_app_frontend/Models/View_VisitorsModel.dart';
 
 class VisitorsApiServices{
   Future<dynamic> viewVisitorsData(
-      String vistorName,String vistorPhone,String vistorAadhar, String  vistorPlace,String purposeOfVisit) async{
+      String securityId,String vistorName,String vistorPhone,String vistorAadhar, String  vistorPlace,String purposeOfVisit) async{
     var client=http.Client();
     var apiUrl=Uri.parse("");
     var response=await client.post(apiUrl,
@@ -13,6 +13,7 @@ class VisitorsApiServices{
         },
         body: jsonEncode(<String,String>
         {
+          "securityId": securityId,
           "vistorName": vistorName,
           "vistorPhone": vistorPhone,
           "vistorAadhar": vistorAadhar,

@@ -9,7 +9,8 @@ class AddVisistors extends StatefulWidget {
 }
 
 class _AddVisistorsState extends State<AddVisistors> {
-  String Name="", Phone="",Aadhar="",Place="",purpose_of_visit="";
+  String SecurityId="" ,Name="", Phone="",Aadhar="",Place="",purpose_of_visit="";
+  TextEditingController securityId1=new TextEditingController();
   TextEditingController name1=new TextEditingController();
   TextEditingController phone1=new TextEditingController();
   TextEditingController aadhar1=new TextEditingController();
@@ -17,6 +18,7 @@ class _AddVisistorsState extends State<AddVisistors> {
   TextEditingController purpose1=new TextEditingController();
   void SentDataApi() async{
     final response=await VisitorsApiServices().viewVisitorsData(
+        securityId1.text,
         name1.text,
         phone1.text,
         aadhar1.text,
@@ -48,6 +50,13 @@ class _AddVisistorsState extends State<AddVisistors> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
+              TextField(
+                controller: securityId1,
+                decoration: InputDecoration(
+                    labelText: "Security Id",
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(15))
+                ),),
+              SizedBox(height: 20),
               TextField(
                 controller: name1,
                 decoration: InputDecoration(
