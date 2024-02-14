@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:securty_app_frontend/Pages/login_page.dart';
+import 'package:securty_app_frontend/Pages/menu.dart';
 
 class AdminLoginPage extends StatefulWidget {
   const AdminLoginPage({super.key});
@@ -68,7 +69,7 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                                   borderRadius: BorderRadius.circular(10)
                               )
                           ),
-                          onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));}, child:Text("Log In")),
+                          onPressed:(){Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()));}, child:Text("Log In")),
                     ),
                     SizedBox(width: 25,),
                     SizedBox(
