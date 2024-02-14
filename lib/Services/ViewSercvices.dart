@@ -16,8 +16,8 @@ class SecurityApiServices {
           "EmployeeId": employeeId,
           "Address": address,
           "PhoneNumber": phoneNumber,
-          "EmailId": emaiId,
-          "Password": password,
+          "EmailId": emailId,
+          "Password": password
         })
     );
     if (response.statusCode == 200) {

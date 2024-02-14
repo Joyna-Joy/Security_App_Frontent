@@ -89,6 +89,7 @@ class _AddSecurityState extends State<AddSecurity> {
                       hintText: "Enter Phone_Number",
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
                   ),
+                ),
                   SizedBox(height: 25,),
                 TextField(
                   controller: EmailId1,
