@@ -64,8 +64,6 @@ class _View_SecuirtyState extends State<View_Secuirty> {
               }
             },
           )
-
-
       ),
     );
   }
