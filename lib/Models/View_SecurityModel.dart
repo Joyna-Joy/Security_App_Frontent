@@ -13,12 +13,16 @@ class ViewSecurity {
   String employeeId;
   String address;
   String phoneNumber;
+  String emaiId;
+  String password;
 
   ViewSecurity({
     required this.userName,
     required this.employeeId,
     required this.address,
     required this.phoneNumber,
+    required this.emaiId,
+    required this.password,
   });
 
   factory ViewSecurity.fromJson(Map<String, dynamic> json) => ViewSecurity(
@@ -26,6 +30,8 @@ class ViewSecurity {
     employeeId: json["EmployeeId"],
     address: json["Address"],
     phoneNumber: json["PhoneNumber"],
+    phoneNumber: json["emaiId"],
+    phoneNumber: json["password"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -33,5 +39,7 @@ class ViewSecurity {
     "EmployeeId": employeeId,
     "Address": address,
     "PhoneNumber": phoneNumber,
+    "EmailId": emaiId,
+    "Password": password,
   };
 }

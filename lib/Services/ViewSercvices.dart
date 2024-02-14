@@ -3,8 +3,7 @@ import 'package:securty_app_frontend/Models/View_SecurityModel.dart';
 import 'dart:convert';
 import 'package:securty_app_frontend/Pages/view_Security.dart';
 class SecurityApiServices {
-  Future<dynamic> viewSecurityData(String userName, String employeeId,
-      String address, String phoneNumber) async {
+  Future<dynamic> viewSecurityData(String userName, String employeeId,String address, String phoneNumber,String emailId,String password) async {
     var client = http.Client();
     var apiUrl = Uri.parse("");
     var response = await client.post(apiUrl,
@@ -17,6 +16,8 @@ class SecurityApiServices {
           "EmployeeId": employeeId,
           "Address": address,
           "PhoneNumber": phoneNumber,
+          "EmailId": emaiId,
+          "Password": password,
         })
     );
     if (response.statusCode == 200) {
